@@ -3,5 +3,5 @@ This repository contains the main functions for operating within the Lie algebra
 
 The $SO(3)$ group is defined as
 
-$$SO(3) = \left\{ \mathbf{R} \in \mathbb{R}^{3 \times 3} \;\Big|\; \mathbf{R}^T\mathbf{R} = \mathbf{I}, \, \det(\mathbf{R}) = 1 \right\}$$
+$$SO(3) = \{ \mathbf{R} \in \mathbb{R}^{3 \times 3} \;\Big|\; \mathbf{R}^T\mathbf{R} = \mathbf{I}, \, \det(\mathbf{R}) = 1 \}$$
 
