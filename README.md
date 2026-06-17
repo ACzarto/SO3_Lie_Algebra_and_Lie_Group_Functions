@@ -1,5 +1,5 @@
 # SO3_Lie_Algebra_and_Lie_Group_Functions
-This repository contains the main functions associated with the Lie algebra and Lie group, especially considering the $SO(3)$ group, the Special Orthogonal Group (Group of Rotation Matrices of dimension 3 with determinant equal to 1).
+This repository contains the main functions associated with the Lie algebra and Lie group, especially considering the $SO(3)$ group, the Special Orthogonal Group (Group of Orthogonal Matrices of dimension 3 with determinant equal to 1).
 
 For the applications proposed in the thesis, the following maps will be used:
 
@@ -25,11 +25,13 @@ where:
 - $\log$ denotes the matrix logarithm map from $SO(3)$ to $\mathfrak{so}(3)$;
 - $Log$ denotes the logarithm map in vector form (vee representation).
 
-The main challenge with this formulation is that the $SO(3)$ manifold is non-linear and compact, meaning that a straight linear combination of rotation matrices (the arithmetic mean) generally results in a matrix that violates the orthogonality constraint, $\mathbf{R}^T\mathbf{R} = \mathbf{I}$. Thus, instead of the traditional Euclidean mean, we require the definition of the Karcher mean:
+One of the challenges with this formulation is that the $SO(3)$ manifold is non-linear and compact, meaning that a straight linear combination of rotation matrices (the arithmetic mean) generally results in a matrix that violates the orthogonality constraint, $\mathbf{R}^T\mathbf{R} = \mathbf{I}$. Thus, instead of the traditional Euclidean mean, we require the definition of the Karcher mean:
 
 $$\mathbf{\hat{R}} = \arg\min_{\mathbf{R} \in SO(3)} \sum_{i=1}^N \Vert \text{logm}(\mathbf{R}^T \mathbf{R}_i) \Vert^2_F$$
 
 And in this case, we use the Frobenius norm of the matrix $||*||_F$.
 
-Since there is no closed-form analytical solution to minimize this sum of squared geodesic distances, $\mathbf{\hat{R}}$ must be computed iteratively using a Riemmanian Gradient Descent algorithm on the manifold. This is the last algorithm of this repository.
+Since there is no closed-form analytical solution to minimize this sum of squared geodesic distances, $\mathbf{\hat{R}}$ must be computed iteratively using a Riemmanian Gradient Descent algorithm on the manifold. 
+
+The repository also contains other functions for calculating the covariance matrix in the presence of Lie group-valued states.
 
