@@ -25,7 +25,7 @@ where:
 - $\log$ denotes the matrix logarithm map from $SO(3)$ to $\mathfrak{so}(3)$;
 - $Log$ denotes the logarithm map in vector form (vee representation).
 
-One of the challenges with this formulation is that the $SO(3)$ manifold is non-linear and compact, meaning that a straight linear combination of rotation matrices (the arithmetic mean) generally results in a matrix that violates the orthogonality constraint, $\mathbf{R}^T\mathbf{R} = \mathbf{I}$. Thus, instead of the traditional Euclidean mean, we require the definition of the Karcher mean:
+Another function to be defined is the mean: one of the challenges with this formulation in the Lie group is that the $SO(3)$ manifold is non-linear and compact, meaning that a straight linear combination of rotation matrices (the arithmetic mean) generally results in a matrix that violates the orthogonality constraint, $\mathbf{R}^T\mathbf{R} = \mathbf{I}$. Thus, instead of the traditional Euclidean mean, we require the definition of the Karcher mean:
 
 $$\mathbf{\hat{R}} = \arg\min_{\mathbf{R} \in SO(3)} \sum_{i=1}^N \Vert \text{logm}(\mathbf{R}^T \mathbf{R}_i) \Vert^2_F$$
 
